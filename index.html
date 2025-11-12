@@ -27,7 +27,7 @@
                     <p>A Computer Science Graduate</p>
                     <h1>Hi, I'm <span> Namandeep </span><br> from Hong Kong</h1>
                 </div>
-                <img src="images/Me.JPG" class="myImage">
+                <img src="images/Me.jpg" class="myImage">
             </div>
         </div>
     </div>
@@ -101,8 +101,7 @@
                     <h3>Data Pipeline for Processing CSV Files</h3>
                     <p>A serverless data pipeline on AWS for processing CSV files 
                         which automates the ingestion, transformation, and visualization of data.</p>
-                    <a href="https://naman5911-code.github.io/aws-data-pipeline/" target="_blank" rel="noopener noreferrer">
-                        <i class="fa-solid fa-up-right-from-square"></i></a>
+                    <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
                 </div>
             </div>
             <div class="work">
@@ -111,12 +110,21 @@
                     <h3>Automated AWS Receipt Processing System</h3>
                     <p>An automating receipt processing system using AWS services which 
                         extracts structured data from receipts and stores it efficiently for record-keeping and auditing.</p>
-                    <a href="https://naman5911-code.github.io/serverless-receipt-processor/" target="_blank" rel="noopener noreferrer">
-                        <i class="fa-solid fa-up-right-from-square"></i></a>
+                    <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work" id="travelease-project" style="display: none;">
+                <img src="images/travelease.jpg">
+                <div class="layer">
+                    <h3>TravelEase - HK Tourism Assistant</h3>
+                    <p>AI-powered travel assistant for Hong Kong tourists featuring chatbot, expense tracking, and personalized recommendations.</p>
+                    <a href="https://drive.google.com/file/d/1VkvvOxXTl3_oPT-VUW1uSSAcYTO3veIM/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-solid fa-up-right-from-square"></i>
+                    </a>
                 </div>
             </div>
         </div>
-        <a href="#" class="btn">See more</a>
+        <a href="#" class="btn" id="seeMoreBtn">See more</a>
     </div>
 </div>
 
@@ -201,6 +209,22 @@
         .catch(error => console.error('Error!', error.message))
     })
 </script>
+
+<script>
+    document.getElementById('seeMoreBtn').addEventListener('click', function(e) {
+        e.preventDefault();
+        const project = document.getElementById('travelease-project');
+        const btn = document.getElementById('seeMoreBtn');
+        
+        if (project.style.display === 'none') {
+            project.style.display = 'block';
+            btn.textContent = 'See less';
+        } else {
+            project.style.display = 'none';
+            btn.textContent = 'See more';
+        }
+    });
+    </script>
 
 </body>
 </html>
