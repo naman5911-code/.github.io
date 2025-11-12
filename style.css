@@ -187,11 +187,14 @@ nav ul li a:hover::after{
 }
 
 .work-list{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 300px); /* 3 columns */
     justify-content: center;
     gap: 50px;
-    flex-wrap: wrap;
     margin-top: 30px;
+}
+.work:nth-child(4) {
+    grid-column: 1; /* Forces it to the first column of second row */
 }
 
 .work{
@@ -507,6 +510,7 @@ nav .fa-solid{
     .btn{
         padding: 12px 30px;
     }
+
 }
 
 #msg{
