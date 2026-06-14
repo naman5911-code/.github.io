@@ -86,6 +86,15 @@
         <h1 class="sub-title">My Work</h1>
         <div class="work-list">
             <div class="work">
+                <img src="images/to-do list app.png">
+                <div class="layer">
+                    <h3>Two-Tier To-Do List App on AWS</h3>
+                    <p>Deployed a highly available to-do list app using EC2, RDS, and Application Load Balancer. 
+                        Features 2 EC2 instances behind ALB with MySQL database in private subnet.</p>
+                    <a href="https://github.com/YOUR-USERNAME/aws-two-tier-todo-app"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
                 <img src="images/eventannouncement.jpg">
                 <div class="layer">
                     <h3>Event Announcement System</h3>
@@ -105,7 +114,7 @@
                         <i class="fa-solid fa-up-right-from-square"></i></a>
                 </div>
             </div>
-            <div class="work">
+            <div class="work hidden-project" id="receipt-project">
                 <img src="images/invoicesystem.jpg">
                 <div class="layer">
                     <h3>Automated AWS Receipt Processing System</h3>
@@ -115,7 +124,7 @@
                         <i class="fa-solid fa-up-right-from-square"></i></a>
                 </div>
             </div>
-            <div class="work" id="travelease-project" style="display: none;">
+            <div class="work hidden-project" id="travelease-project">
                 <img src="images/travelease.jpg">
                 <div class="layer">
                     <h3>TravelEase - HK Tourism Assistant</h3>
@@ -215,18 +224,21 @@
 <script>
     document.getElementById('seeMoreBtn').addEventListener('click', function(e) {
         e.preventDefault();
-        const project = document.getElementById('travelease-project');
+        const receiptProject = document.getElementById('receipt-project');
+        const traveleaseProject = document.getElementById('travelease-project');
         const btn = document.getElementById('seeMoreBtn');
         
-        if (project.style.display === 'none') {
-            project.style.display = 'block';
+        if (receiptProject.style.display === 'none' || receiptProject.style.display === '') {
+            receiptProject.style.display = 'block';
+            traveleaseProject.style.display = 'block';
             btn.textContent = 'See less';
         } else {
-            project.style.display = 'none';
+            receiptProject.style.display = 'none';
+            traveleaseProject.style.display = 'none';
             btn.textContent = 'See more';
         }
     });
-    </script>
+</script>
 
 </body>
 </html>
