@@ -87,13 +87,22 @@
         <h1 class="sub-title">My Work</h1>
         <div class="work-list">
             <div class="work">
+                <img src="images/2048-cicd.jpg">
+                <div class="layer">
+                    <h3>CI/CD Pipeline for 2048 Game</h3>
+                    <p>Automated CI/CD pipeline for a Dockerized 2048 game using CodePipeline, CodeBuild, ECR, and ECS Fargate. Auto-deploys on every GitHub push.</p>
+                    <a href="https://github.com/naman5911-code/2048-game-ci-cd" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
                 <img src="images/to-do list app.png">
                 <div class="layer">
                     <h3>Two-Tier To-Do List App on AWS</h3>
                     <p>Deployed a highly available to-do list app using EC2, RDS, and Application Load Balancer. 
                         Features 2 EC2 instances behind ALB with MySQL database in private subnet.</p>
-                    <a href="https://github.com/naman5911-code/aws-two-tier-todo-app" target="_blank" rel="noopener noreferrer">
-                        <i class="fa-solid fa-up-right-from-square"></i></a>
+                <a href="https://github.com/naman5911-code/aws-two-tier-todo-app" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-solid fa-up-right-from-square"></i></a>
                 </div>
             </div>
             <div class="work">
@@ -106,7 +115,7 @@
                         <i class="fa-solid fa-up-right-from-square"></i></a>
                 </div>
             </div>
-            <div class="work">
+            <div class="work hidden-project" id="datapipeline-project">
                 <img src="images/datapipeline.jpg">
                 <div class="layer">
                     <h3>Data Pipeline for Processing CSV Files</h3>
@@ -155,7 +164,7 @@
                    <a href="https://www.instagram.com/nnaamaannnn?igsh=dWQ4NGk2dzk3MmNp&utm_source=qr">
                     <i class="fa-brands fa-instagram"></i></a>
                 </div>
-                <a href="Namandeep-CV.docx" target="_blank" class="btn btn2">Download CV</a>
+                <a href="images/Namandeep-CV.docx"  download class="btn btn2">Download CV</a>
             </div>
             <div class="contact-right">
                 <form name="submit-to-google-sheet">
@@ -226,15 +235,18 @@
 <script>
     document.getElementById('seeMoreBtn').addEventListener('click', function(e) {
         e.preventDefault();
+        const datapipelineProject = document.getElementById('datapipeline-project');
         const receiptProject = document.getElementById('receipt-project');
         const traveleaseProject = document.getElementById('travelease-project');
         const btn = document.getElementById('seeMoreBtn');
         
-        if (receiptProject.style.display === 'none' || receiptProject.style.display === '') {
+        if (datapipelineProject.style.display === 'none' || datapipelineProject.style.display === '') {
+            datapipelineProject.style.display = 'block';
             receiptProject.style.display = 'block';
             traveleaseProject.style.display = 'block';
             btn.textContent = 'See less';
         } else {
+            datapipelineProject.style.display = 'none';
             receiptProject.style.display = 'none';
             traveleaseProject.style.display = 'none';
             btn.textContent = 'See more';
